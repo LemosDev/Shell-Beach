@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c3t0agmod0yc"]
+
+[resource]
+resource_name = "Marmore"
+cull_mode = 2
+roughness = 0.5

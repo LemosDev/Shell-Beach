@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bww6wf7hd2prs"]
+
+[resource]
+resource_name = "Sofa"
+cull_mode = 2
+albedo_color = Color(0.491175, 0.229601, 0.144802, 1)
+roughness = 0.5

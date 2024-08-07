@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://buhuxc73tdbnx"]
+
+[resource]
+resource_name = "Almofada"
+cull_mode = 2
+albedo_color = Color(0.374202, 0.173775, 0.106927, 1)
+roughness = 0.5
+normal_enabled = true

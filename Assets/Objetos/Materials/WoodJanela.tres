@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://rew06a80xod6"]
+
+[resource]
+resource_name = "WoodJanela"
+cull_mode = 2
+roughness = 0.5

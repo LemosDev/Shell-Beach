@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://rogdtiuvhayg"]
+
+[resource]
+resource_name = "woodRack"
+cull_mode = 2
+roughness = 0.5

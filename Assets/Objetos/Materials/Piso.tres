@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://2w8h2gi28d2"]
+
+[resource]
+resource_name = "Piso"
+cull_mode = 2
+albedo_color = Color(0.0185702, 0.0185702, 0.0185702, 1)

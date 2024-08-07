@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cbxjjnn0q4ltv"]
+
+[resource]
+resource_name = "Tapete"
+cull_mode = 2
+albedo_color = Color(0.650652, 0.0419092, 0.113122, 1)
