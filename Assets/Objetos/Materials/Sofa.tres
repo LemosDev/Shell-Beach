@@ -1,7 +1,11 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://bww6wf7hd2prs"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bww6wf7hd2prs"]
+
+[ext_resource type="Texture2D" uid="uid://7ayps3ybrhls" path="res://Assets/Texture/Sofa/SofaNormal.png" id="1_w7bdu"]
 
 [resource]
 resource_name = "Sofa"
 cull_mode = 2
 albedo_color = Color(0.491175, 0.229601, 0.144802, 1)
-roughness = 0.5
+roughness = 0.8
+normal_enabled = true
+normal_texture = ExtResource("1_w7bdu")

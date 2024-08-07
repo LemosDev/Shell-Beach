@@ -1,6 +1,9 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://c3t0agmod0yc"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c3t0agmod0yc"]
+
+[ext_resource type="Texture2D" uid="uid://dbhkbo1fkd538" path="res://Assets/Texture/Marmore/MarmoreDifuse.png" id="1_j3ftl"]
 
 [resource]
 resource_name = "Marmore"
 cull_mode = 2
+albedo_texture = ExtResource("1_j3ftl")
 roughness = 0.5

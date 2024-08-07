@@ -1,6 +1,9 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://2w8h2gi28d2"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://2w8h2gi28d2"]
+
+[ext_resource type="Texture2D" uid="uid://dmbb8ds3ahlxf" path="res://Assets/Texture/Piso/PisoRugosidade.png" id="1_iyhrr"]
 
 [resource]
 resource_name = "Piso"
 cull_mode = 2
-albedo_color = Color(0.0185702, 0.0185702, 0.0185702, 1)
+albedo_color = Color(0, 0, 0, 1)
+roughness_texture = ExtResource("1_iyhrr")

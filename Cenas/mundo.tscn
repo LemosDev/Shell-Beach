@@ -1,3 +1,32 @@
-[gd_scene format=3 uid="uid://b16bjafoa1om"]
+[gd_scene load_steps=6 format=3 uid="uid://b16bjafoa1om"]
+
+[ext_resource type="Texture2D" uid="uid://bn2mm1f72hh0w" path="res://Assets/HDRI/zwartkops_straight_morning_2k.exr" id="1_0k63y"]
+[ext_resource type="PackedScene" uid="uid://clpnb81tgkyll" path="res://Assets/Objetos/room.glb" id="1_5ckq5"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_3qfnu"]
+panorama = ExtResource("1_0k63y")
+
+[sub_resource type="Sky" id="Sky_5h6hk"]
+sky_material = SubResource("PanoramaSkyMaterial_3qfnu")
+
+[sub_resource type="Environment" id="Environment_ydhr1"]
+background_mode = 2
+sky = SubResource("Sky_5h6hk")
+tonemap_mode = 2
+glow_enabled = true
 
 [node name="Mundo" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ydhr1")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="room" parent="." instance=ExtResource("1_5ckq5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.239392, 0, 0.168127)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.819152, 0, 0.573576, 0, 1, 0, -0.573576, 0, 0.819152, 1.73343, 1.20362, 2.86861)
+fov = 50.0
