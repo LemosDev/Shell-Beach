@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://7g4coghtga80"]
+
+[ext_resource type="Material" uid="uid://g2ywv6xkr111" path="res://Assets/Objetos/Material/outline.tres" id="1_blmyc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0bs05"]
+next_pass = ExtResource("1_blmyc")
+diffuse_mode = 3
+specular_mode = 1
+metallic_specular = 0.0
+roughness = 0.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_klmia"]
+material = SubResource("StandardMaterial3D_0bs05")
+radial_segments = 32
+rings = 16
+
+[node name="Nuvem" type="MeshInstance3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.34063, 0, 0, 0, 1.23114, 0, 0, 0, 1.86571, -1.10707, 0.280743, -0.399213)
+mesh = SubResource("SphereMesh_klmia")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.34063, 0, 0, 0, 1.23114, 0, 0, 0, 1.86571, -0.0951045, 0.0141332, -0.262304)
+mesh = SubResource("SphereMesh_klmia")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.34063, 0, 0, 0, 1.23114, 0, 0, 0, 1.86571, 0.864406, 0.153533, -0.888523)
+mesh = SubResource("SphereMesh_klmia")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.34063, 0, 0, 0, 1.23114, 0, 0, 0, 1.86571, -0.0951045, 0.891253, -1.11368)
+mesh = SubResource("SphereMesh_klmia")
+skeleton = NodePath("../..")

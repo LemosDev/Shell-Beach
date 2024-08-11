@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3eyud5mdq23o"]
+
+[ext_resource type="PackedScene" uid="uid://sw5hy181d2i2" path="res://Assets/Objetos/praia.glb" id="1_asvef"]
+
+[node name="praia" instance=ExtResource("1_asvef")]
+
+[node name="Areia" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 2.31963, 0, 0, 0, 1, 0, -0.108891, 0)

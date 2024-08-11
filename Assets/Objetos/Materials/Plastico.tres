@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://bq4ax5kqrj2ai"]
-
-[resource]
-resource_name = "Plastico"
-cull_mode = 2
-albedo_color = Color(0.335843, 0.335843, 0.335843, 1)
-roughness = 0.7

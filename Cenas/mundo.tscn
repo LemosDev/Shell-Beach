@@ -1,32 +1,211 @@
-[gd_scene load_steps=6 format=3 uid="uid://b16bjafoa1om"]
+[gd_scene load_steps=26 format=3 uid="uid://b16bjafoa1om"]
 
-[ext_resource type="Texture2D" uid="uid://bn2mm1f72hh0w" path="res://Assets/HDRI/zwartkops_straight_morning_2k.exr" id="1_0k63y"]
-[ext_resource type="PackedScene" uid="uid://clpnb81tgkyll" path="res://Assets/Objetos/room.glb" id="1_5ckq5"]
+[ext_resource type="Texture2D" uid="uid://dpf66yb81fhae" path="res://Assets/HDRI/spiaggia_di_mondello_2k.exr" id="1_itp2t"]
+[ext_resource type="PackedScene" uid="uid://sw5hy181d2i2" path="res://Assets/Objetos/praia.glb" id="2_gj3v3"]
+[ext_resource type="Shader" uid="uid://bfsdchjwvuy4c" path="res://Cenas/mundo.tres" id="3_j23ri"]
+[ext_resource type="PackedScene" uid="uid://7g4coghtga80" path="res://Cenas/nuvem.tscn" id="4_pwpom"]
+[ext_resource type="Material" uid="uid://g2ywv6xkr111" path="res://Assets/Objetos/Material/outline.tres" id="5_5gis2"]
+[ext_resource type="Script" path="res://Scripts/nuvem.gd" id="6_68s3v"]
 
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_3qfnu"]
-panorama = ExtResource("1_0k63y")
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_wgie6"]
+panorama = ExtResource("1_itp2t")
 
-[sub_resource type="Sky" id="Sky_5h6hk"]
-sky_material = SubResource("PanoramaSkyMaterial_3qfnu")
+[sub_resource type="Sky" id="Sky_3n5ke"]
+sky_material = SubResource("PanoramaSkyMaterial_wgie6")
 
-[sub_resource type="Environment" id="Environment_ydhr1"]
+[sub_resource type="Environment" id="Environment_83uyp"]
 background_mode = 2
-sky = SubResource("Sky_5h6hk")
-tonemap_mode = 2
-glow_enabled = true
+sky = SubResource("Sky_3n5ke")
+sky_rotation = Vector3(-0.0261799, 0.523599, 0)
+ssao_enabled = true
+ssao_intensity = 3.0
+ssil_enabled = true
+sdfgi_use_occlusion = true
+volumetric_fog_density = 0.1
+volumetric_fog_emission = Color(0.59, 0.59, 0.59, 1)
+volumetric_fog_sky_affect = 0.5
+adjustment_enabled = true
+adjustment_contrast = 1.1
+adjustment_saturation = 1.3
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_nici1"]
+size = Vector2(25, 20)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_knsin"]
+render_priority = 0
+shader = ExtResource("3_j23ri")
+shader_parameter/ColorParameter = Color(0.138609, 0.283962, 0.634943, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t2kpg"]
+resource_name = "areia"
+next_pass = ExtResource("5_5gis2")
+cull_mode = 2
+albedo_color = Color(0.85412, 0.627029, 0.424196, 1)
+roughness = 0.8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cl0g1"]
+resource_name = "Coqueiro"
+next_pass = ExtResource("5_5gis2")
+cull_mode = 2
+albedo_color = Color(0.546616, 0.353095, 0.237473, 1)
+roughness = 0.8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jrjfv"]
+resource_name = "Pedra"
+next_pass = ExtResource("5_5gis2")
+cull_mode = 2
+albedo_color = Color(0.40426, 0.40426, 0.40426, 1)
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_21w0i"]
+resource_name = "Pedra"
+next_pass = ExtResource("5_5gis2")
+cull_mode = 2
+albedo_color = Color(0.40426, 0.40426, 0.40426, 1)
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5uv0t"]
+resource_name = "Pedra"
+next_pass = ExtResource("5_5gis2")
+cull_mode = 2
+albedo_color = Color(0.40426, 0.40426, 0.40426, 1)
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1xpei"]
+resource_name = "Pedra"
+next_pass = ExtResource("5_5gis2")
+cull_mode = 2
+albedo_color = Color(0.40426, 0.40426, 0.40426, 1)
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fjv2e"]
+resource_name = "Coqueiro"
+next_pass = ExtResource("5_5gis2")
+cull_mode = 2
+albedo_color = Color(0.546616, 0.353095, 0.237473, 1)
+roughness = 0.8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sdpom"]
+resource_name = "Folhas"
+next_pass = ExtResource("5_5gis2")
+cull_mode = 2
+albedo_color = Color(0.140636, 0.558007, 0.12678, 1)
+roughness = 0.8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n0nfe"]
+resource_name = "Pedra"
+next_pass = ExtResource("5_5gis2")
+cull_mode = 2
+albedo_color = Color(0.40426, 0.40426, 0.40426, 1)
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y8jma"]
+resource_name = "Pedra"
+next_pass = ExtResource("5_5gis2")
+cull_mode = 2
+albedo_color = Color(0.40426, 0.40426, 0.40426, 1)
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_huw6t"]
+resource_name = "Pedra"
+next_pass = ExtResource("5_5gis2")
+cull_mode = 2
+albedo_color = Color(0.40426, 0.40426, 0.40426, 1)
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r40jf"]
+resource_name = "Pedra"
+next_pass = ExtResource("5_5gis2")
+cull_mode = 2
+albedo_color = Color(0.40426, 0.40426, 0.40426, 1)
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_na3ta"]
+resource_name = "Pedra"
+next_pass = ExtResource("5_5gis2")
+cull_mode = 2
+albedo_color = Color(0.40426, 0.40426, 0.40426, 1)
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tdbcj"]
+resource_name = "Folhas"
+next_pass = ExtResource("5_5gis2")
+cull_mode = 2
+albedo_color = Color(0.140636, 0.558007, 0.12678, 1)
+roughness = 0.8
 
 [node name="Mundo" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_ydhr1")
+environment = SubResource("Environment_83uyp")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+transform = Transform3D(-0.909069, 0.327857, 0.257106, 0.415206, 0.764139, 0.493655, -0.0346164, 0.555518, -0.830783, 0, 0, 0)
 shadow_enabled = true
 
-[node name="room" parent="." instance=ExtResource("1_5ckq5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.239392, 0, 0.168127)
-
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.819152, 0, 0.573576, 0, 1, 0, -0.573576, 0, 0.819152, 1.73343, 1.20362, 2.86861)
-fov = 50.0
+transform = Transform3D(0.990471, 0, 0.137721, 0.00513067, 0.999306, -0.0368992, -0.137625, 0.0372542, 0.989784, 0.879809, 1.01619, 3.52622)
+
+[node name="Agua" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.198564, -4.3389)
+mesh = SubResource("PlaneMesh_nici1")
+surface_material_override/0 = SubResource("ShaderMaterial_knsin")
+
+[node name="praia" parent="." instance=ExtResource("2_gj3v3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43034, 0)
+
+[node name="Areia" parent="praia" index="0"]
+material_override = SubResource("StandardMaterial3D_t2kpg")
+
+[node name="BaseCoqueiro2" parent="praia" index="1"]
+material_override = SubResource("StandardMaterial3D_cl0g1")
+
+[node name="Pedra6" parent="praia" index="2"]
+material_override = SubResource("StandardMaterial3D_jrjfv")
+
+[node name="Pedra5" parent="praia" index="3"]
+material_override = SubResource("StandardMaterial3D_21w0i")
+
+[node name="Pedra8" parent="praia" index="4"]
+material_override = SubResource("StandardMaterial3D_5uv0t")
+
+[node name="Pedra" parent="praia" index="5"]
+material_override = SubResource("StandardMaterial3D_1xpei")
+
+[node name="BaseCoqueiro" parent="praia" index="6"]
+material_override = SubResource("StandardMaterial3D_fjv2e")
+
+[node name="Folhas" parent="praia" index="7"]
+material_override = SubResource("StandardMaterial3D_sdpom")
+
+[node name="Pedra1" parent="praia" index="8"]
+material_override = SubResource("StandardMaterial3D_n0nfe")
+
+[node name="Pedra4" parent="praia" index="9"]
+material_override = SubResource("StandardMaterial3D_y8jma")
+
+[node name="Pedra7" parent="praia" index="10"]
+material_override = SubResource("StandardMaterial3D_huw6t")
+
+[node name="Pedra2" parent="praia" index="11"]
+material_override = SubResource("StandardMaterial3D_r40jf")
+
+[node name="Pedra3" parent="praia" index="12"]
+material_override = SubResource("StandardMaterial3D_na3ta")
+
+[node name="Folhas2" parent="praia" index="13"]
+material_override = SubResource("StandardMaterial3D_tdbcj")
+
+[node name="Nuvem" parent="." instance=ExtResource("4_pwpom")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.6273, -8.56542)
+script = ExtResource("6_68s3v")
+
+[node name="Nuvem3" parent="." instance=ExtResource("4_pwpom")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5701, 4.6273, -19.6428)
+script = ExtResource("6_68s3v")
+
+[node name="Nuvem2" parent="." instance=ExtResource("4_pwpom")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.28737, 4.6273, -6.48394)
+script = ExtResource("6_68s3v")
+
+[editable path="praia"]
