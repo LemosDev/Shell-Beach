@@ -1,0 +1,72 @@
+[gd_scene load_steps=10 format=3 uid="uid://dpasori6l8muy"]
+
+[ext_resource type="Shader" uid="uid://bfsdchjwvuy4c" path="res://Cenas/mundo.tres" id="1_7eteg"]
+[ext_resource type="Texture2D" uid="uid://dpf66yb81fhae" path="res://Assets/HDRI/spiaggia_di_mondello_2k.exr" id="1_uc1s8"]
+[ext_resource type="PackedScene" uid="uid://853y35ic1tj8" path="res://level_1.tscn" id="2_1tvku"]
+[ext_resource type="Texture2D" uid="uid://ngd7t14bhsld" path="res://Assets/mountain-range-free-png.png" id="4_m26ce"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_xnddy"]
+panorama = ExtResource("1_uc1s8")
+
+[sub_resource type="Sky" id="Sky_0ic8t"]
+sky_material = SubResource("PanoramaSkyMaterial_xnddy")
+
+[sub_resource type="Environment" id="Environment_0wljb"]
+background_mode = 2
+sky = SubResource("Sky_0ic8t")
+sky_rotation = Vector3(0, 1.3439, 0)
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
+sdfgi_use_occlusion = true
+fog_enabled = true
+fog_sky_affect = 0.9
+volumetric_fog_albedo = Color(0.396889, 0.396889, 0.396889, 1)
+volumetric_fog_ambient_inject = 6.0
+adjustment_enabled = true
+adjustment_contrast = 1.1
+adjustment_saturation = 1.2
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_sjv6o"]
+size = Vector2(25, 20)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ktskq"]
+render_priority = 0
+shader = ExtResource("1_7eteg")
+shader_parameter/ColorParameter = Color(0.138609, 0.283962, 0.634943, 1)
+
+[node name="Mapa" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0wljb")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.99499, 0.0362756, -0.093167, 4.5401e-08, 0.931856, 0.362828, 0.09998, 0.36101, -0.927187, 0, 2.00775, 0)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.675873, -0.368509, 0.638276, 0, 0.866025, 0.5, -0.737018, -0.337937, 0.585323, 0.644278, 3.14426, 2.97212)
+
+[node name="Agua" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.42007, 0, 0, 0, 1, 0, 0, 0, 3.4469, -21.8658, -0.1, -20.8667)
+mesh = SubResource("PlaneMesh_sjv6o")
+surface_material_override/0 = SubResource("ShaderMaterial_ktskq")
+
+[node name="level1" parent="." instance=ExtResource("2_1tvku")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.86176, -0.002, -2.64669)
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.286282, 0, 1.73484, 0, 1.3764, 0, -1.47941, 0, 0.335711, -69.1999, 1.51441, 0.220551)
+modulate = Color(0.377919, 0.377919, 0.377919, 1)
+texture = ExtResource("4_m26ce")
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(1.30279, 0, 0.887942, 0, 1.3764, 0, -0.757205, 0, 1.52772, -41.8382, 2.24972, -23.7243)
+modulate = Color(0.376471, 0.376471, 0.376471, 1)
+texture = ExtResource("4_m26ce")
+
+[node name="Sprite3D3" type="Sprite3D" parent="."]
+transform = Transform3D(1.06105, 0, 0.910501, 0, 0.948262, 0, -0.739429, 0, 1.30653, -4.17609, 2.26689, -33.7504)
+modulate = Color(0.376471, 0.376471, 0.376471, 1)
+texture = ExtResource("4_m26ce")

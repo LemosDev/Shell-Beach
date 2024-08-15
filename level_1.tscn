@@ -1,0 +1,76 @@
+[gd_scene load_steps=14 format=3 uid="uid://853y35ic1tj8"]
+
+[ext_resource type="PackedScene" uid="uid://4uaieb4r7fnh" path="res://Assets/Objetos/level1.glb" id="1_blve6"]
+[ext_resource type="Texture2D" uid="uid://hvwgq6806v0b" path="res://Assets/Objetos/Praia/PraiaNormal.png" id="3_ecm4b"]
+[ext_resource type="Material" uid="uid://g2ywv6xkr111" path="res://Assets/Objetos/Material/outline.tres" id="3_hjtdn"]
+[ext_resource type="Texture2D" uid="uid://dx1v52bldpacu" path="res://Assets/Objetos/Praia/PraiaRugosidade.png" id="4_wqg77"]
+[ext_resource type="Material" uid="uid://qj20x1asc30r" path="res://Assets/Objetos/Material/cercaMaterial.tres" id="5_1l4ua"]
+[ext_resource type="Material" uid="uid://bpt8m8clxa0nu" path="res://Assets/Objetos/Material/coqueiroMaterial.tres" id="6_n6s7g"]
+[ext_resource type="Texture2D" uid="uid://dq60usgwpp0hr" path="res://Assets/Objetos/Praia/PassarelaDifuse.png" id="6_wqkqm"]
+[ext_resource type="Texture2D" uid="uid://dp8y1inyy5ioj" path="res://Assets/Objetos/Praia/PassarelaNormal.png" id="7_omc52"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6mn3i"]
+next_pass = ExtResource("3_hjtdn")
+albedo_color = Color(0.854902, 0.627451, 0.423529, 1)
+roughness_texture = ExtResource("4_wqg77")
+normal_enabled = true
+normal_scale = 0.5
+normal_texture = ExtResource("3_ecm4b")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8s40w"]
+resource_name = "Folhas"
+next_pass = ExtResource("3_hjtdn")
+cull_mode = 2
+albedo_color = Color(0.140636, 0.558007, 0.12678, 1)
+roughness = 0.8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_21ldj"]
+resource_name = "Folhas"
+next_pass = ExtResource("3_hjtdn")
+cull_mode = 2
+albedo_color = Color(0.140636, 0.558007, 0.12678, 1)
+roughness = 0.8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_51wx1"]
+next_pass = ExtResource("3_hjtdn")
+albedo_texture = ExtResource("6_wqkqm")
+normal_enabled = true
+normal_scale = 0.5
+normal_texture = ExtResource("7_omc52")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ahgbs"]
+next_pass = ExtResource("3_hjtdn")
+albedo_texture = ExtResource("6_wqkqm")
+normal_enabled = true
+normal_scale = 0.5
+normal_texture = ExtResource("7_omc52")
+
+[node name="level1" instance=ExtResource("1_blve6")]
+
+[node name="Praia" parent="." index="0"]
+transform = Transform3D(0.992041, 0, 0, 0, 0.992041, 0, 0, 0, 0.992041, -0.182457, -0.00791538, -0.412885)
+material_override = SubResource("StandardMaterial3D_6mn3i")
+
+[node name="Folhas" parent="." index="1"]
+material_override = SubResource("StandardMaterial3D_8s40w")
+
+[node name="BaseCoqueiro" parent="." index="2"]
+material_override = ExtResource("6_n6s7g")
+
+[node name="Folhas2" parent="." index="3"]
+material_override = SubResource("StandardMaterial3D_21ldj")
+
+[node name="BaseCoqueiro2" parent="." index="4"]
+material_override = ExtResource("6_n6s7g")
+
+[node name="cerca2" parent="." index="5"]
+material_override = ExtResource("5_1l4ua")
+
+[node name="Passarela" parent="." index="11"]
+material_override = SubResource("StandardMaterial3D_51wx1")
+
+[node name="BasePassarela" parent="." index="12"]
+material_override = SubResource("StandardMaterial3D_ahgbs")
+
+[node name="Cerca" parent="." index="13"]
+material_override = ExtResource("5_1l4ua")

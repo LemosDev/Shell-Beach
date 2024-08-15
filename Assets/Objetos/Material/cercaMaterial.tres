@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://qj20x1asc30r"]
+
+[ext_resource type="Texture2D" uid="uid://ciey24t2pgjw8" path="res://Assets/Objetos/Praia/cercaDifuse.png" id="1_ih3mh"]
+[ext_resource type="Material" uid="uid://g2ywv6xkr111" path="res://Assets/Objetos/Material/outline.tres" id="2_rue1j"]
+
+[resource]
+next_pass = ExtResource("2_rue1j")
+albedo_texture = ExtResource("1_ih3mh")

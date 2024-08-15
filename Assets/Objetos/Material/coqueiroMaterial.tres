@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bpt8m8clxa0nu"]
+
+[ext_resource type="Material" uid="uid://g2ywv6xkr111" path="res://Assets/Objetos/Material/outline.tres" id="1_attwg"]
+
+[resource]
+resource_name = "Coqueiro"
+next_pass = ExtResource("1_attwg")
+cull_mode = 2
+albedo_color = Color(0.546616, 0.353095, 0.237473, 1)
+roughness = 0.8

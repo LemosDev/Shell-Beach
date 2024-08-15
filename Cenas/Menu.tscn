@@ -1,14 +1,15 @@
-[gd_scene load_steps=26 format=3 uid="uid://b16bjafoa1om"]
+[gd_scene load_steps=27 format=3 uid="uid://b16bjafoa1om"]
 
-[ext_resource type="Texture2D" uid="uid://dpf66yb81fhae" path="res://Assets/HDRI/spiaggia_di_mondello_2k.exr" id="1_itp2t"]
-[ext_resource type="PackedScene" uid="uid://sw5hy181d2i2" path="res://Assets/Objetos/praia.glb" id="2_gj3v3"]
-[ext_resource type="Shader" uid="uid://bfsdchjwvuy4c" path="res://Cenas/mundo.tres" id="3_j23ri"]
-[ext_resource type="PackedScene" uid="uid://7g4coghtga80" path="res://Cenas/nuvem.tscn" id="4_pwpom"]
-[ext_resource type="Material" uid="uid://g2ywv6xkr111" path="res://Assets/Objetos/Material/outline.tres" id="5_5gis2"]
-[ext_resource type="Script" path="res://Scripts/nuvem.gd" id="6_68s3v"]
+[ext_resource type="Texture2D" uid="uid://dpf66yb81fhae" path="res://Assets/HDRI/spiaggia_di_mondello_2k.exr" id="1_nerju"]
+[ext_resource type="Shader" uid="uid://bfsdchjwvuy4c" path="res://Cenas/mundo.tres" id="2_6b56a"]
+[ext_resource type="PackedScene" uid="uid://sw5hy181d2i2" path="res://Assets/Objetos/praia.glb" id="3_jiabx"]
+[ext_resource type="Material" uid="uid://g2ywv6xkr111" path="res://Assets/Objetos/Material/outline.tres" id="4_yonft"]
+[ext_resource type="PackedScene" uid="uid://7g4coghtga80" path="res://Cenas/nuvem.tscn" id="5_fcol7"]
+[ext_resource type="Script" path="res://Scripts/Menu.gd" id="6_q1kay"]
+[ext_resource type="FontFile" uid="uid://rs20aj6lv7ch" path="res://Fontes/Copyduck.ttf" id="7_m7jlw"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_wgie6"]
-panorama = ExtResource("1_itp2t")
+panorama = ExtResource("1_nerju")
 
 [sub_resource type="Sky" id="Sky_3n5ke"]
 sky_material = SubResource("PanoramaSkyMaterial_wgie6")
@@ -33,103 +34,103 @@ size = Vector2(25, 20)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_knsin"]
 render_priority = 0
-shader = ExtResource("3_j23ri")
+shader = ExtResource("2_6b56a")
 shader_parameter/ColorParameter = Color(0.138609, 0.283962, 0.634943, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t2kpg"]
 resource_name = "areia"
-next_pass = ExtResource("5_5gis2")
+next_pass = ExtResource("4_yonft")
 cull_mode = 2
 albedo_color = Color(0.85412, 0.627029, 0.424196, 1)
 roughness = 0.8
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cl0g1"]
 resource_name = "Coqueiro"
-next_pass = ExtResource("5_5gis2")
+next_pass = ExtResource("4_yonft")
 cull_mode = 2
 albedo_color = Color(0.546616, 0.353095, 0.237473, 1)
 roughness = 0.8
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jrjfv"]
 resource_name = "Pedra"
-next_pass = ExtResource("5_5gis2")
+next_pass = ExtResource("4_yonft")
 cull_mode = 2
 albedo_color = Color(0.40426, 0.40426, 0.40426, 1)
 roughness = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_21w0i"]
 resource_name = "Pedra"
-next_pass = ExtResource("5_5gis2")
+next_pass = ExtResource("4_yonft")
 cull_mode = 2
 albedo_color = Color(0.40426, 0.40426, 0.40426, 1)
 roughness = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5uv0t"]
 resource_name = "Pedra"
-next_pass = ExtResource("5_5gis2")
+next_pass = ExtResource("4_yonft")
 cull_mode = 2
 albedo_color = Color(0.40426, 0.40426, 0.40426, 1)
 roughness = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1xpei"]
 resource_name = "Pedra"
-next_pass = ExtResource("5_5gis2")
+next_pass = ExtResource("4_yonft")
 cull_mode = 2
 albedo_color = Color(0.40426, 0.40426, 0.40426, 1)
 roughness = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fjv2e"]
 resource_name = "Coqueiro"
-next_pass = ExtResource("5_5gis2")
+next_pass = ExtResource("4_yonft")
 cull_mode = 2
 albedo_color = Color(0.546616, 0.353095, 0.237473, 1)
 roughness = 0.8
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sdpom"]
 resource_name = "Folhas"
-next_pass = ExtResource("5_5gis2")
+next_pass = ExtResource("4_yonft")
 cull_mode = 2
 albedo_color = Color(0.140636, 0.558007, 0.12678, 1)
 roughness = 0.8
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n0nfe"]
 resource_name = "Pedra"
-next_pass = ExtResource("5_5gis2")
+next_pass = ExtResource("4_yonft")
 cull_mode = 2
 albedo_color = Color(0.40426, 0.40426, 0.40426, 1)
 roughness = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y8jma"]
 resource_name = "Pedra"
-next_pass = ExtResource("5_5gis2")
+next_pass = ExtResource("4_yonft")
 cull_mode = 2
 albedo_color = Color(0.40426, 0.40426, 0.40426, 1)
 roughness = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_huw6t"]
 resource_name = "Pedra"
-next_pass = ExtResource("5_5gis2")
+next_pass = ExtResource("4_yonft")
 cull_mode = 2
 albedo_color = Color(0.40426, 0.40426, 0.40426, 1)
 roughness = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r40jf"]
 resource_name = "Pedra"
-next_pass = ExtResource("5_5gis2")
+next_pass = ExtResource("4_yonft")
 cull_mode = 2
 albedo_color = Color(0.40426, 0.40426, 0.40426, 1)
 roughness = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_na3ta"]
 resource_name = "Pedra"
-next_pass = ExtResource("5_5gis2")
+next_pass = ExtResource("4_yonft")
 cull_mode = 2
 albedo_color = Color(0.40426, 0.40426, 0.40426, 1)
 roughness = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tdbcj"]
 resource_name = "Folhas"
-next_pass = ExtResource("5_5gis2")
+next_pass = ExtResource("4_yonft")
 cull_mode = 2
 albedo_color = Color(0.140636, 0.558007, 0.12678, 1)
 roughness = 0.8
@@ -151,7 +152,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.198564, -4.3389)
 mesh = SubResource("PlaneMesh_nici1")
 surface_material_override/0 = SubResource("ShaderMaterial_knsin")
 
-[node name="praia" parent="." instance=ExtResource("2_gj3v3")]
+[node name="praia" parent="." instance=ExtResource("3_jiabx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43034, 0)
 
 [node name="Areia" parent="praia" index="0"]
@@ -196,16 +197,75 @@ material_override = SubResource("StandardMaterial3D_na3ta")
 [node name="Folhas2" parent="praia" index="13"]
 material_override = SubResource("StandardMaterial3D_tdbcj")
 
-[node name="Nuvem" parent="." instance=ExtResource("4_pwpom")]
+[node name="Nuvem" parent="." instance=ExtResource("5_fcol7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.6273, -8.56542)
-script = ExtResource("6_68s3v")
 
-[node name="Nuvem3" parent="." instance=ExtResource("4_pwpom")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5701, 4.6273, -19.6428)
-script = ExtResource("6_68s3v")
+[node name="Nuvem4" parent="." instance=ExtResource("5_fcol7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.66753, 4.6273, -3.88895)
 
-[node name="Nuvem2" parent="." instance=ExtResource("4_pwpom")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.28737, 4.6273, -6.48394)
-script = ExtResource("6_68s3v")
+[node name="Nuvem3" parent="." instance=ExtResource("5_fcol7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9563, 4.6273, -19.6428)
+
+[node name="Nuvem2" parent="." instance=ExtResource("5_fcol7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6204, 4.6273, -6.48394)
+
+[node name="Menu" type="Control" parent="."]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+script = ExtResource("6_q1kay")
+
+[node name="Label" type="Label" parent="Menu"]
+layout_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -610.0
+offset_top = -27.0
+offset_right = 610.0
+offset_bottom = 26.0
+pivot_offset = Vector2(621, 27)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(3.36915e-06, 0.586926, 0.562193, 1)
+theme_override_fonts/font = ExtResource("7_m7jlw")
+theme_override_font_sizes/font_size = 50
+text = "SHELL BEACH"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.506
+anchor_top = 0.931
+anchor_right = 0.506
+anchor_bottom = 0.931
+offset_left = -97.6801
+offset_top = -20.3201
+offset_right = 97.3199
+offset_bottom = 19.6799
+pivot_offset = Vector2(101, 22)
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Play" type="Button" parent="Menu/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_m7jlw")
+theme_override_font_sizes/font_size = 30
+text = "JOGAR"
+icon_alignment = 1
+
+[node name="Sair" type="Button" parent="Menu/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_m7jlw")
+theme_override_font_sizes/font_size = 30
+text = "SAIR"
+
+[connection signal="pressed" from="Menu/HBoxContainer/Play" to="Menu" method="_on_play_pressed"]
+[connection signal="pressed" from="Menu/HBoxContainer/Sair" to="Menu" method="_on_sair_pressed"]
 
 [editable path="praia"]
